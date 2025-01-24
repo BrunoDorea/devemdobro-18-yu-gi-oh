@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'yu-gi-oh';
+    src: url('../fonts/fonte-yu-gi-oh.otf');
+}
+
+/* === Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+/* === Body === */
+body {
+    font-family: 'yu-gi-oh', serif;
+    background-image: url('../images/fundo-site.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 1.875rem;
+}
+
+/* === Header === */
+.cabecalho {
+    display: flex;
+    justify-content: center;
+}
+
+.cabecalho .titulo {
+    color: #f1ecff;
+}
+
+/* === Main === */
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8.125rem;
+}
+
+.lista-personagens {
+    width: 18.75rem;
+    height: 31.25rem;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    padding: .75rem;
+    gap: .3125rem;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.card.selecionado {
+    opacity: 1;
+    z-index: 1;
+}
+
+.card .nome {
+    font-size: .8125rem;
+    line-height: 1.5;
+    text-align: left;
+    text-transform: uppercase;
+    padding: .3125rem;
+    background: radial-gradient(circle,
+            #f3e2c8,
+            #e4cfa5,
+            #c4a57a);
+    border: 2px solid #a67c52;
+    border-radius: .25rem;
+}
+
+.card .nivel-card {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.card .estrela {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url('../images/nivel-carta.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.card .imagem-card {
+    max-width: 16.25rem;
+    align-self: center;
+}
+
+.card .informacoes {
+    line-height: 1.5;
+    text-align: left;
+    border-radius: .3125rem;
+    color: #000;
+    background: radial-gradient(circle,
+            #f3e2c8,
+            #e4cfa5,
+            #c4a57a);
+    border: 2px solid #a67c52;
+    padding: 5px;
+}
+
+.card .informacoes .descricao {
+    border-bottom: 1px solid #000;
+    padding: .625rem;
+    max-height: 5.9375rem;
+    overflow-y: scroll;
+    font-size: .8125rem;
+}
+
+.card .informacoes .info-ataque {
+    display: flex;
+    justify-content: flex-end;
+    gap: .3125rem;
+    padding: .625rem;
+}
+
+.card .informacoes .info-ataque span {
+    font-size: .8125rem;
+}
+
+.btn-seta {
+    background-color: #fff;
+    height: 4.375rem;
+    width: 4.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.2) 0rem .4375rem 1.8125rem 0rem;
+}
+
+.btn-seta:hover {
+    background-color: #f3e2c8;
+}
+
+.btn-seta.btn-voltar {
+    transform: rotateY(180deg);
+}
+
+/* Fundo Cards */
+.fundo-1 {
+    background: url('../images/fundo-1.jpg') no-repeat;
+}
+
+.fundo-2 {
+    background: url('../imagens/fundo-2.png') no-repeat;
+}
+
+.fundo-3 {
+    background: url('../imagens/fundo-3.png') no-repeat;
+}
+
+.fundo-4 {
+    background: url('../imagens/fundo-4.png') no-repeat;
+}
+
+.fundo-5 {
+    background: url('../imagens/fundo-5.png') no-repeat;
+}
+
+.fundo-6 {
+    background: url('../imagens/fundo-6.png') no-repeat;
+}
+
+.fundo-7 {
+    background: url('../imagens/fundo-7.png') no-repeat;
+}
+
+.fundo-8 {
+    background: url('../imagens/fundo-8.png') no-repeat;
+}
+
+/* === Scroll === */
+body::-webkit-scrollbar-track {
+    background-color: #c08057;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c08057;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c08057;
+}
