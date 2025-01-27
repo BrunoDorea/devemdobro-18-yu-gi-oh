@@ -25,3 +25,14 @@ function esconderCardSelecionado() {
     const cardSelecionado = document.querySelector(".selecionado")
     cardSelecionado.classList.remove("selecionado")
 }
+
+cards.forEach(card => {
+    card.addEventListener("click", () => {
+        const cardVirado = card.querySelector('.card-virada')
+        cardVirado.classList.toggle('virar')
+        cardVirado.classList.toggle('mostrar-fundo-carta')
+
+        const descricao = card.querySelector('.descricao')
+        descricao.classList.toggle('esconder')
+    })
+})
