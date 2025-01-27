@@ -51,6 +51,7 @@ body {
     height: 31.25rem;
     border-radius: 10px;
     position: relative;
+    padding: .75rem;
 }
 
 .card {
@@ -61,6 +62,30 @@ body {
     gap: .3125rem;
     position: absolute;
     border-radius: 10px;
+}
+
+.card-virada,
+.esconder {
+    display: none;
+}
+
+.card.virar {
+    transform: rotateZ('90deg');
+    transition: transform 0.5s ease-in-out;
+}
+
+.card-virada.mostrar-fundo-carta {
+    background: url('../images/fundo-carta.jpg');
+    background-size: cover;
+    background-position: center;
+    border-radius: .625rem;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
 }
 
 .card.selecionado {
@@ -205,4 +230,55 @@ body::-webkit-scrollbar-track {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #c08057;
+}
+
+/* === Responsivo === */
+@media(max-width: 768px) {
+    body {
+        background-position: center;
+        padding: 0 15px;
+    }
+
+    .slider {
+        gap: 10px;
+    }
+}
+
+@media(max-width: 496px) {
+    .lista-personagens {
+        width: 250px;
+    }
+
+    .imagem-card {
+        width: 100%;
+    }
+
+    .slider {
+        position: relative;
+    }
+
+    .btn-seta {
+        position: absolute;
+        bottom: -13%;
+    }
+
+    #btn-avancar {
+        right: 20%;
+    }
+
+    #btn-voltar {
+        left: 20%;
+    }
+}
+
+@media(max-width: 375px) {
+    body {
+        justify-content: start;
+        padding-top: 10px;
+        gap: 10px;
+    }
+
+    .cabecalho {
+        font-size: 12px;
+    }
 }
